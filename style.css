@@ -1,48 +1,61 @@
-/* =========================
-   GLOBAL SETTINGS
-========================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url(
+'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'
+);
 
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
+
 
 
 body{
 
-    font-family:'Poppins',sans-serif;
-    background:#0b1120;
-    color:#ffffff;
-    line-height:1.7;
+font-family:Poppins,sans-serif;
+
+background:#050816;
+
+color:white;
 
 }
 
 
 
-/* =========================
-   NAVBAR
-========================= */
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+
+
+/* NAVBAR */
 
 
 nav{
 
-    position:sticky;
-    top:0;
-    z-index:100;
+display:flex;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+justify-content:space-between;
 
-    padding:20px 8%;
+align-items:center;
 
-    background:rgba(15,23,42,0.8);
+padding:25px 10%;
 
-    backdrop-filter:blur(10px);
+position:sticky;
+
+top:0;
+
+background:#050816;
+
+z-index:100;
+
 
 }
 
@@ -50,145 +63,193 @@ nav{
 
 nav h2{
 
-    color:#38bdf8;
+font-size:30px;
 
 }
+
+
+nav span{
+
+color:#00e5ff;
+
+}
+
 
 
 nav a{
 
-    color:white;
-    text-decoration:none;
+color:white;
 
-    margin-left:25px;
+text-decoration:none;
 
-    font-size:15px;
+margin-left:25px;
 
 }
+
 
 
 nav a:hover{
 
-    color:#38bdf8;
+color:#00e5ff;
 
 }
 
 
 
-/* =========================
- HERO SECTION
-========================= */
+
+
+/* HERO */
 
 
 header{
 
+min-height:90vh;
 
-    min-height:90vh;
+display:flex;
 
-    display:flex;
-    flex-direction:column;
+align-items:center;
 
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
+padding:50px 10%;
 
 
-    background:
+background:
 
-    radial-gradient(circle at top,#1e40af,#020617);
-
-
-    padding:50px 20px;
+radial-gradient(circle at right,#2563eb,transparent 40%);
 
 
 }
 
 
 
-header h1{
+.hero{
 
-    font-size:60px;
+display:flex;
 
-    background:
-    linear-gradient(90deg,#38bdf8,#818cf8);
+align-items:center;
 
-    -webkit-background-clip:text;
+justify-content:space-between;
 
-    color:transparent;
-
-}
-
-
-
-header h2{
-
-    margin:20px 0;
-
-    font-size:28px;
-
-}
-
-
-header p{
-
-    max-width:750px;
-
-    color:#cbd5e1;
-
-    font-size:18px;
+width:100%;
 
 }
 
 
 
+.hero-text{
 
-header a{
-
-
-    margin-top:30px;
-
-    padding:14px 35px;
-
-    border-radius:50px;
-
-
-    background:
-    linear-gradient(90deg,#2563eb,#9333ea);
-
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-
+max-width:600px;
 
 }
 
 
-header a:hover{
+
+.hero h1{
+
+font-size:60px;
+
+}
 
 
-    transform:translateY(-5px);
+
+.hero span{
+
+color:#00e5ff;
+
+}
+
+
+
+.hero h2{
+
+font-size:28px;
+
+margin:20px 0;
+
+}
+
+
+
+.hero p{
+
+color:#cbd5e1;
+
+font-size:18px;
 
 }
 
 
 
 
-/* =========================
- SECTIONS
-========================= */
+.profile img{
+
+width:320px;
+
+height:320px;
+
+border-radius:50%;
+
+border:6px solid #00e5ff;
+
+}
+
+
+
+
+
+.buttons{
+
+margin-top:30px;
+
+}
+
+
+.btn,
+.btn-outline{
+
+
+padding:14px 30px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+margin-right:15px;
+
+
+}
+
+
+
+.btn{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+
+
+.btn-outline{
+
+border:1px solid #00e5ff;
+
+color:white;
+
+}
+
+
+
+
+
+/* SECTIONS */
 
 
 section{
 
+width:85%;
 
-    width:85%;
-
-    margin:70px auto;
-
+margin:80px auto;
 
 }
 
@@ -196,48 +257,32 @@ section{
 
 section h2{
 
+text-align:center;
 
-    text-align:center;
+font-size:40px;
 
-    font-size:35px;
+color:#00e5ff;
 
-    margin-bottom:40px;
-
-
-    color:#38bdf8;
-
+margin-bottom:40px;
 
 }
 
 
 
-/* =========================
- GLASS CARD
-========================= */
+
+.card{
 
 
-section p,
-.project,
-.skills p{
+background:
+
+rgba(255,255,255,.08);
 
 
-    background:
+padding:30px;
 
-    rgba(255,255,255,0.08);
+border-radius:20px;
 
-
-    border:
-
-    1px solid rgba(255,255,255,0.1);
-
-
-    backdrop-filter:blur(15px);
-
-
-    border-radius:20px;
-
-
-    padding:25px;
+border:1px solid rgba(255,255,255,.1);
 
 
 }
@@ -245,73 +290,51 @@ section p,
 
 
 
-
-/* =========================
- SKILLS
-========================= */
+/* SKILLS */
 
 
 .skills{
 
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:
+grid-template-columns:
 
-    repeat(auto-fit,minmax(150px,1fr));
-
-
-    gap:20px;
+repeat(auto-fit,minmax(150px,1fr));
 
 
-}
-
-
-
-.skills p{
-
-
-    text-align:center;
-
-    font-weight:600;
-
-    transition:.3s;
+gap:20px;
 
 
 }
 
 
 
-.skills p:hover{
+.skills div{
 
 
-    transform:translateY(-10px);
+padding:30px;
+
+background:#111827;
+
+border-radius:20px;
+
+text-align:center;
 
 
-    background:
-
-    linear-gradient(135deg,#2563eb,#9333ea);
+transition:.3s;
 
 
 }
 
 
 
+.skills div:hover{
 
 
-/* =========================
- EXPERIENCE
-========================= */
+transform:translateY(-10px);
 
-
-section h3{
-
-
-    color:#818cf8;
-
-    margin-top:35px;
-
-    font-size:22px;
+background:#2563eb;
 
 
 }
@@ -319,33 +342,36 @@ section h3{
 
 
 
-/* =========================
- PROJECT CARDS
-========================= */
+
+/* PROJECTS */
 
 
 .project{
 
 
-    margin-bottom:30px;
+display:flex;
 
+gap:30px;
 
-    transition:.4s;
+background:#111827;
+
+padding:30px;
+
+border-radius:20px;
+
+margin-bottom:30px;
 
 
 }
 
 
 
-.project:hover{
+.project img{
 
 
-    transform:translateY(-10px);
+width:300px;
 
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.4);
+border-radius:15px;
 
 
 }
@@ -354,83 +380,72 @@ section h3{
 
 .project h3{
 
-
-    color:#38bdf8;
-
+color:#00e5ff;
 
 }
 
 
 
-
-
-/* =========================
- CONTACT
-========================= */
-
-
-#contact a{
-
-
-    color:#38bdf8;
-
-}
-
-
-
-/* =========================
- FOOTER
-========================= */
 
 
 footer{
 
+text-align:center;
 
-    text-align:center;
+padding:30px;
 
-    padding:30px;
-
-    background:#020617;
-
-    color:#94a3b8;
-
+background:#020617;
 
 }
 
 
 
-/* =========================
- MOBILE
-========================= */
 
 
-@media(max-width:768px){
+@media(max-width:800px){
 
 
-header h1{
+.hero{
 
-    font-size:40px;
+flex-direction:column;
+
+text-align:center;
 
 }
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+.profile img{
+
+margin-top:40px;
+
+}
+
+
+.project{
+
+flex-direction:column;
+
+}
+
+
+.project img{
+
+width:100%;
+
+}
+
 
 
 nav{
 
-    flex-direction:column;
-
-}
-
-
-nav div{
-
-    margin-top:20px;
-
-}
-
-
-section{
-
-    width:95%;
+flex-direction:column;
 
 }
 
