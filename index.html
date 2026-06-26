@@ -3,114 +3,152 @@
 
 <head>
 
+    <!-- Basic -->
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Souvik Ghosh | Data Analyst | Power BI Developer | SQL Developer Portfolio">
-
-    <meta name="keywords"
-          content="Power BI, SQL, Data Analyst, Business Intelligence, Dashboard, Portfolio">
-
-    <meta name="author"
-          content="Souvik Ghosh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Souvik Ghosh | Data Analyst Portfolio</title>
 
-    <!-- Google Font -->
+    <meta name="description"
+        content="Portfolio of Souvik Ghosh - Data Analyst | Power BI Developer | SQL | DAX | Business Intelligence Analyst">
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <meta name="keywords"
+        content="Souvik Ghosh, Data Analyst, Power BI, SQL, DAX, Dashboard Developer, Business Intelligence">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <meta name="author" content="Souvik Ghosh">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Souvik Ghosh | Data Analyst Portfolio">
+    <meta property="og:description"
+        content="Power BI • SQL • DAX • Dashboard Development • Data Analytics">
+    <meta property="og:image" content="profile.png">
 
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="profile.png">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="style.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
+<!-- =========================
+NAVBAR
+========================= -->
 
-
-<!-- ==========================
-        NAVIGATION
-=========================== -->
+<header class="header">
 
 <nav class="navbar">
 
-    <div class="logo">
+<div class="logo">
 
-        <a href="#">
+<a href="index.html">
 
-            Souvik<span>.</span>
+Souvik<span>.</span>
 
-        </a>
+</a>
 
-    </div>
+</div>
 
-    <ul class="nav-links">
 
-        <li><a href="#home">Home</a></li>
+<!-- Hamburger -->
 
-        <li><a href="#about">About</a></li>
+<div class="hamburger">
 
-        <li><a href="#skills">Skills</a></li>
+<i class="fas fa-bars"></i>
 
-        <li><a href="#experience">Experience</a></li>
+</div>
 
-        <li><a href="#projects">Projects</a></li>
 
-        <li><a href="#certifications">Certificates</a></li>
+<ul class="nav-links">
 
-        <li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
 
-    </ul>
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#experience">Experience</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+
+
+<div class="nav-buttons">
+
+<button id="theme-toggle">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+
+<a class="resume-btn"
+href="resume.pdf"
+download>
+
+<i class="fas fa-download"></i>
+
+Resume
+
+</a>
+
+
+</div>
 
 </nav>
 
+</header>
 
 
 
-<!-- ==========================
-            HERO
-=========================== -->
-
-<section id="home" class="hero">
-
-<div class="hero-container">
 
 
+<!-- =========================
+MAIN
+========================= -->
 
-<!-- LEFT SIDE -->
+<main>
 
-<div class="hero-content">
 
-<p class="welcome">
 
-Hello 👋 I'm
 
-</p>
+<!-- =========================
+HERO
+========================= -->
 
+<section class="hero" id="home">
+
+<div class="hero-left">
+
+<h4>
+
+HELLO 👋
+
+</h4>
 
 
 <h1>
 
-Souvik <span>Ghosh</span>
+I'm
+
+<span>
+
+Souvik Ghosh
+
+</span>
 
 </h1>
 
@@ -118,7 +156,7 @@ Souvik <span>Ghosh</span>
 
 <h2>
 
-<span id="typing">
+<span id="typing-text">
 
 Data Analyst
 
@@ -127,62 +165,56 @@ Data Analyst
 </h2>
 
 
+<p>
 
-<p class="hero-description">
-
-Data Analyst with 2.6+ years of experience in
-
-Power BI, SQL, DAX, Dashboard Development,
-
-Business Intelligence and Data Visualization.
-
-Passionate about transforming raw data
-
-into actionable business insights.
+Data Analyst with <strong>2.6+ years</strong> of experience
+building Power BI dashboards, writing SQL queries,
+creating DAX measures, and transforming business data
+into meaningful insights.
 
 </p>
 
 
 
+
 <div class="hero-buttons">
 
-<a href="assets/resume.pdf"
-class="btn-primary"
-download>
+<a href="#contact"
 
-<i class="fa-solid fa-download"></i>
+class="btn-primary">
+
+Hire Me
+
+</a>
+
+
+
+<a href="resume.pdf"
+
+download
+
+class="btn-secondary">
 
 Download Resume
 
 </a>
 
 
-
-<a href="#projects"
-class="btn-secondary">
-
-<i class="fa-solid fa-chart-column"></i>
-
-View Projects
-
-</a>
-
 </div>
 
 
 
 
 
+<div class="hero-social">
 
-<!-- SOCIAL ICONS -->
 
-<div class="social-icons">
 
 <a href="https://github.com/SouvikAnalysis"
 
 target="_blank"
 
-title="GitHub">
+rel="noopener">
 
 <i class="fab fa-github"></i>
 
@@ -190,1191 +222,17 @@ title="GitHub">
 
 
 
+
 <a href="https://www.linkedin.com/in/souvik-ghosh-"
 
 target="_blank"
 
-title="LinkedIn">
+rel="noopener">
 
 <i class="fab fa-linkedin"></i>
 
 </a>
 
-
-
-<a href="mailto:souvikghoshsg7@mail.com"
-
-title="Email">
-
-<i class="fas fa-envelope"></i>
-
-</a>
-
-
-
-<a href="tel:+919475385318"
-
-title="Phone">
-
-<i class="fas fa-phone"></i>
-
-</a>
-
-
-
-<a href="#contact"
-
-title="Location">
-
-<i class="fas fa-location-dot"></i>
-
-</a>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- RIGHT SIDE -->
-
-<div class="hero-image">
-
-<img src="images/profile.png"
-
-alt="Souvik Ghosh">
-
-</div>
-
-
-
-</div>
-
-
-
-
-<!-- Scroll Down -->
-
-<div class="scroll-down">
-
-<a href="#about">
-
-<i class="fa-solid fa-angles-down"></i>
-
-</a>
-
-</div>
-
-</section>
-
-
-
-
-<!-- ==========================
-        ABOUT STARTS HERE
-=========================== -->
-
-<section id="about">
-
-<h2 class="section-title">
-
-About Me
-
-</h2>
-
-
-<!-- ==========================
-        ABOUT LEFT
-=========================== -->
-
-<div class="about-text">
-
-<h3>
-
-Who am I?
-
-</h3>
-
-<p>
-
-I'm a passionate <strong>Data Analyst</strong> with over
-<strong>2.6 years</strong> of professional experience in
-Business Intelligence, Dashboard Development,
-Power BI, SQL, DAX, Excel, and Data Visualization.
-
-I enjoy solving business problems using data,
-creating interactive dashboards and transforming
-complex datasets into meaningful insights.
-
-</p>
-
-<p>
-
-My experience spans enterprise projects at
-<strong>Cognizant</strong>, freelance Power BI solutions,
-and enterprise IT support.
-
-I'm always eager to learn emerging technologies
-like AI, Machine Learning, and Cloud Analytics.
-
-</p>
-
-</div>
-
-
-
-<!-- ==========================
-        ABOUT STATS
-=========================== -->
-
-<div class="about-stats">
-
-<div class="stat-card">
-
-<h2>2.6+</h2>
-
-<p>Years Experience</p>
-
-</div>
-
-
-
-<div class="stat-card">
-
-<h2>15+</h2>
-
-<p>Dashboards Built</p>
-
-</div>
-
-
-
-<div class="stat-card">
-
-<h2>25+</h2>
-
-<p>SQL Solutions</p>
-
-</div>
-
-
-
-<div class="stat-card">
-
-<h2>100%</h2>
-
-<p>Dedication</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- ==========================
-        SKILLS
-=========================== -->
-
-<section id="skills">
-
-<h2 class="section-title">
-
-Technical Skills
-
-</h2>
-
-
-<div class="skills-grid">
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-chart-column"></i>
-
-<h3>Power BI</h3>
-
-<p>
-
-Interactive Dashboards,
-Power Query,
-Bookmarks,
-KPI Reporting
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-database"></i>
-
-<h3>SQL</h3>
-
-<p>
-
-Joins,
-CTE,
-Window Functions,
-Optimization
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-table"></i>
-
-<h3>Excel</h3>
-
-<p>
-
-Pivot Tables,
-Power Query,
-Charts,
-Dashboards
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-brands fa-python"></i>
-
-<h3>Python</h3>
-
-<p>
-
-Pandas,
-NumPy,
-Matplotlib,
-Automation
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-bolt"></i>
-
-<h3>DAX</h3>
-
-<p>
-
-Measures,
-Calculated Columns,
-KPIs,
-Time Intelligence
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-snowflake"></i>
-
-<h3>Snowflake</h3>
-
-<p>
-
-Cloud Data Warehouse
-
-SQL Analytics
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-layer-group"></i>
-
-<h3>Data Modeling</h3>
-
-<p>
-
-Star Schema
-
-Relationships
-
-Normalization
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="skill-card">
-
-<i class="fa-solid fa-gears"></i>
-
-<h3>ETL</h3>
-
-<p>
-
-Data Cleaning
-
-Transformation
-
-Loading
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-<!-- ==========================
-        EXPERIENCE
-=========================== -->
-
-<section id="experience">
-
-<h2 class="section-title">
-
-Experience
-
-</h2>
-
-<div class="timeline">
-
-
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-content">
-
-<h3>
-
-IT Support Engineer
-
-</h3>
-
-<h4>
-
-Welspun Michigan Engineers Ltd
-
-</h4>
-
-<span>
-
-Nov 2025 - Present
-
-</span>
-
-<p>
-
-• Software & Network Troubleshooting
-
-• Incident Analysis
-
-• User Support
-
-• Technical Documentation
-
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-content">
-
-<h3>
-
-Freelance Power BI Developer
-
-</h3>
-
-<h4>
-
-Power BI & AI Projects
-
-</h4>
-
-<span>
-
-Oct 2024 - Jun 2025
-
-</span>
-
-<p>
-
-• Power BI Dashboard Development
-
-• KPI Reporting
-
-• SQL Analysis
-
-• AI-Driven Reporting
-
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-content">
-
-<h3>
-
-Associate Data Analyst
-
-</h3>
-
-<h4>
-
-Cognizant Technology Solutions
-
-</h4>
-
-<span>
-
-Jan 2022 - Aug 2024
-
-</span>
-
-<p>
-
-• Power BI Dashboards
-
-• SQL Optimization
-
-• Data Validation
-
-• Business Reporting
-
-• DAX Measures
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<!-- ==========================
-        PROJECTS
-=========================== -->
-
-<section id="projects">
-
-<h2 class="section-title">
-
-Featured Projects
-
-</h2>
-
-<div class="projects-grid">
-
-<div class="about-container">
-
-                                                                                                                                                                                                                                    
-<!-- ==========================
-        PROJECT 1
-=========================== -->
-
-<div class="project-card">
-
-    <img src="images/swiggy.png"
-         alt="Swiggy Dashboard">
-
-    <div class="project-content">
-
-        <h3>Swiggy Power BI Ranking Dashboard</h3>
-
-        <p>
-
-            An interactive Power BI dashboard built to analyze
-            sales performance, customer behavior,
-            city-wise trends and Top-N products.
-
-        </p>
-
-        <div class="project-tech">
-
-            <span>Power BI</span>
-
-            <span>DAX</span>
-
-            <span>Excel</span>
-
-        </div>
-
-        <a href="#" class="project-btn">
-
-            View Project
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</div>
-
-
-
-
-
-<!-- ==========================
-        PROJECT 2
-=========================== -->
-
-<div class="project-card">
-
-    <img src="images/pge.png"
-         alt="PGE Analytics Dashboard">
-
-    <div class="project-content">
-
-        <h3>PGE Palantir Foundry Analytics</h3>
-
-        <p>
-
-            Enterprise reporting solution using
-            SQL, Power BI, and Data Validation
-            to improve reporting accuracy and
-            business insights.
-
-        </p>
-
-        <div class="project-tech">
-
-            <span>SQL</span>
-
-            <span>Power BI</span>
-
-            <span>Python</span>
-
-        </div>
-
-        <a href="#" class="project-btn">
-
-            View Project
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</div>
-
-
-
-
-
-<!-- ==========================
-        PROJECT 3
-=========================== -->
-
-<div class="project-card">
-
-    <img src="images/sql.png"
-         alt="SQL Analytics">
-
-    <div class="project-content">
-
-        <h3>SQL Sales Analytics</h3>
-
-        <p>
-
-            Business reporting project using
-            SQL queries, Window Functions,
-            CTEs and Joins for generating
-            actionable insights.
-
-        </p>
-
-        <div class="project-tech">
-
-            <span>SQL</span>
-
-            <span>MySQL</span>
-
-            <span>Analytics</span>
-
-        </div>
-
-        <a href="#" class="project-btn">
-
-            View Project
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-<!-- ==========================
-      CERTIFICATIONS
-=========================== -->
-
-<section id="certifications">
-
-<h2 class="section-title">
-
-Certifications
-
-</h2>
-
-<div class="certificate-grid">
-
-
-
-
-
-<div class="certificate-card">
-
-<i class="fa-solid fa-award"></i>
-
-<h3>
-
-Microsoft Power BI
-
-</h3>
-
-<p>
-
-Power BI Data Analyst
-
-(PL-300)
-
-</p>
-
-<span>
-
-In Progress
-
-</span>
-
-</div>
-
-
-
-
-
-
-<div class="certificate-card">
-
-<i class="fa-solid fa-database"></i>
-
-<h3>
-
-SQL Advanced
-
-</h3>
-
-<p>
-
-Advanced SQL Queries
-
-Optimization
-
-Window Functions
-
-</p>
-
-<span>
-
-Completed
-
-</span>
-
-</div>
-
-
-
-
-
-
-<div class="certificate-card">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h3>
-
-Business Intelligence
-
-</h3>
-
-<p>
-
-Dashboard Design
-
-KPI Reporting
-
-Data Storytelling
-
-</p>
-
-<span>
-
-Completed
-
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-<!-- ==========================
-        ACHIEVEMENTS
-=========================== -->
-
-<section id="achievements">
-
-<h2 class="section-title">
-
-Achievements
-
-</h2>
-
-<div class="achievement-grid">
-
-
-
-
-<div class="achievement-card">
-
-<i class="fa-solid fa-chart-column"></i>
-
-<h3>
-
-15+
-
-</h3>
-
-<p>
-
-Interactive Dashboards
-
-Developed
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="achievement-card">
-
-<i class="fa-solid fa-code"></i>
-
-<h3>
-
-25+
-
-</h3>
-
-<p>
-
-SQL Queries
-
-Optimized
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="achievement-card">
-
-<i class="fa-solid fa-briefcase"></i>
-
-<h3>
-
-2.6+
-
-</h3>
-
-<p>
-
-Years
-
-Experience
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="achievement-card">
-
-<i class="fa-solid fa-users"></i>
-
-<h3>
-
-100%
-
-</h3>
-
-<p>
-
-Client Focus
-
-Business Driven
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-<!-- ==========================
-        CONTACT
-=========================== -->
-
-<section id="contact">
-
-<h2 class="section-title">
-
-Let's Connect
-
-</h2>
-
-<div class="contact-container">
-
-
-<!-- ==========================
-        CONTACT CARD
-=========================== -->
-
-<div class="contact-info">
-
-    <div class="contact-card">
-
-        <i class="fa-solid fa-envelope"></i>
-
-        <h3>Email</h3>
-
-        <a href="mailto:souvikghoshsg7@mail.com">
-
-            souvikghoshsg7@mail.com
-
-        </a>
-
-    </div>
-
-
-
-    <div class="contact-card">
-
-        <i class="fa-solid fa-phone"></i>
-
-        <h3>Phone</h3>
-
-        <a href="tel:+919475385318">
-
-            +91 94753 85318
-
-        </a>
-
-        <br><br>
-
-        <a href="tel:+919902194212">
-
-            +91 99021 94212
-
-        </a>
-
-    </div>
-
-
-
-
-    <div class="contact-card">
-
-        <i class="fab fa-linkedin"></i>
-
-        <h3>LinkedIn</h3>
-
-        <a href="https://www.linkedin.com/in/souvik-ghosh-"
-
-        target="_blank">
-
-            View LinkedIn Profile
-
-        </a>
-
-    </div>
-
-
-
-
-
-    <div class="contact-card">
-
-        <i class="fab fa-github"></i>
-
-        <h3>GitHub</h3>
-
-        <a href="https://github.com/SouvikAnalysis"
-
-        target="_blank">
-
-            github.com/SouvikAnalysis
-
-        </a>
-
-    </div>
-
-
-
-
-
-    <div class="contact-card">
-
-        <i class="fa-solid fa-location-dot"></i>
-
-        <h3>Location</h3>
-
-        <p>
-
-            Mumbai, Maharashtra, India
-
-        </p>
-
-    </div>
-
-</div>
-
-
-
-
-
-<!-- ==========================
-      CONTACT FORM
-=========================== -->
-
-<div class="contact-form">
-
-<form>
-
-<input
-
-type="text"
-
-placeholder="Your Name"
-
-required>
-
-
-
-<input
-
-type="email"
-
-placeholder="Email Address"
-
-required>
-
-
-
-<input
-
-type="text"
-
-placeholder="Subject"
-
-required>
-
-
-
-<textarea
-
-rows="6"
-
-placeholder="Write your message here..."
-
-required>
-
-</textarea>
-
-
-
-<button
-
-type="submit"
-
-class="btn-primary">
-
-<i class="fa-solid fa-paper-plane"></i>
-
-Send Message
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-<!-- ==========================
-        FOOTER
-=========================== -->
-
-<footer>
-
-<div class="footer-container">
-
-<h2>
-
-Souvik<span>.</span>
-
-</h2>
-
-<p>
-
-Thank you for visiting my portfolio.
-
-Let's build something amazing together.
-
-</p>
-
-
-
-<div class="footer-icons">
-
-<a href="https://github.com/SouvikAnalysis"
-
-target="_blank">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-
-
-<a href="https://www.linkedin.com/in/souvik-ghosh-"
-
-target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
 
 
 
@@ -1386,56 +244,581 @@ target="_blank">
 
 
 
+
 <a href="tel:+919475385318">
 
 <i class="fas fa-phone"></i>
 
 </a>
 
+
+</div>
+
 </div>
 
 
 
-<p class="copyright">
 
-© 2026 Souvik Ghosh
 
-All Rights Reserved.
+
+<div class="hero-right">
+
+<div class="profile-card">
+
+<img
+
+src="profile.png"
+
+alt="Souvik Ghosh"
+
+class="profile-image"
+
+>
+
+
+
+<div class="availability">
+
+<span class="dot"></span>
+
+Available for Work
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- ==========================================
+ABOUT
+=========================================== -->
+
+<section id="about" class="about section">
+
+<div class="section-title">
+
+<span>About Me</span>
+
+<h2>Know Me Better</h2>
+
+</div>
+
+
+
+<div class="about-container">
+
+<div class="about-left">
+
+<h3>
+
+Power BI Developer & Data Analyst
+
+</h3>
+
+
+<p>
+
+I am a <strong>Data Analyst</strong> with more than
+<strong>2.6 years of professional experience</strong>
+working in Business Intelligence, Dashboard Development,
+SQL Analytics and Data Visualization.
+
+</p>
+
+
+<p>
+
+I specialize in transforming complex business data into
+interactive Power BI dashboards that help organizations
+make better business decisions.
+
+</p>
+
+
+<p>
+
+Currently working as an IT Support Engineer while
+continuing to build enterprise-grade analytics solutions
+using Power BI, SQL, DAX and Python.
+
+</p>
+
+
+<a href="resume.pdf"
+
+download
+
+class="btn-primary">
+
+Download Resume
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="about-right">
+
+<div class="info-card">
+
+<h4>Name</h4>
+
+<p>Souvik Ghosh</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<h4>Email</h4>
+
+<p>
+
+<a href="mailto:souvikghoshsg7@mail.com">
+
+souvikghoshsg7@mail.com
+
+</a>
 
 </p>
 
 </div>
 
-</footer>
+
+
+<div class="info-card">
+
+<h4>Location</h4>
+
+<p>
+
+Mumbai, Maharashtra, India
+
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<h4>Experience</h4>
+
+<p>
+
+2.6+ Years
+
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<h4>Specialization</h4>
+
+<p>
+
+Data Analytics & Business Intelligence
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+STATISTICS
+=========================================== -->
+
+<section class="statistics">
+
+<div class="counter-card">
+
+<h2 class="counter"
+
+data-target="2.6">
+
+0
+
+</h2>
+
+<p>
+
+Years Experience
+
+</p>
+
+</div>
+
+
+
+
+<div class="counter-card">
+
+<h2 class="counter"
+
+data-target="20">
+
+0
+
+</h2>
+
+<p>
+
+Power BI Dashboards
+
+</p>
+
+</div>
+
+
+
+
+<div class="counter-card">
+
+<h2 class="counter"
+
+data-target="50">
+
+0
+
+</h2>
+
+<p>
+
+SQL Queries
+
+</p>
+
+</div>
+
+
+
+
+<div class="counter-card">
+
+<h2 class="counter"
+
+data-target="10">
+
+0
+
+</h2>
+
+<p>
+
+Projects Completed
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+SKILLS
+=========================================== -->
+
+<section id="skills" class="skills section">
+
+<div class="section-title">
+
+<span>My Skills</span>
+
+<h2>
+
+Technical Expertise
+
+</h2>
+
+</div>
+
+
+
+
+<div class="skills-grid">
+
+
+
+<article class="skill-card">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<h3>
+
+Power BI
+
+</h3>
+
+<p>
+
+Dashboard Development
+
+DAX
+
+Power Query
+
+Power BI Service
+
+Data Visualization
+
+</p>
+
+</article>
+
+
+
+
+
+<article class="skill-card">
+
+<i class="fa-solid fa-database"></i>
+
+<h3>
+
+SQL
+
+</h3>
+
+<p>
+
+Joins
+
+CTE
+
+Window Functions
+
+Stored Procedures
+
+Query Optimization
+
+</p>
+
+</article>
+
+
+
+
+
+<article class="skill-card">
+
+<i class="fa-solid fa-table"></i>
+
+<h3>
+
+Excel
+
+</h3>
+
+<p>
+
+Power Query
+
+Pivot Tables
+
+Power Pivot
+
+Advanced Formulas
+
+Dashboard Reporting
+
+</p>
+
+</article>
 
 
 
 
 
 
-<!-- ==========================
-BACK TO TOP
-=========================== -->
+<article class="skill-card">
 
-<a href="#home"
+<i class="fa-brands fa-python"></i>
 
-class="back-to-top">
+<h3>
 
-<i class="fa-solid fa-arrow-up"></i>
+Python
 
-</a>
+</h3>
+
+<p>
+
+Pandas
+
+NumPy
+
+Data Cleaning
+
+Automation
+
+Data Analysis
+
+</p>
+
+</article>
 
 
 
 
 
 
-<!-- ==========================
-SCRIPT
-=========================== -->
+<article class="skill-card">
 
-<script src="script.js"></script>
+<i class="fa-solid fa-layer-group"></i>
 
-</body>
+<h3>
 
-</html>
+Data Modeling
+
+</h3>
+
+<p>
+
+Star Schema
+
+Snowflake Schema
+
+Relationships
+
+Normalization
+
+Fact & Dimension Tables
+
+</p>
+
+</article>
+
+
+
+
+
+
+<article class="skill-card">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>
+
+Cloud & ETL
+
+</h3>
+
+<p>
+
+Snowflake
+
+ETL Concepts
+
+Data Warehousing
+
+Data Pipelines
+
+Business Intelligence
+
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ==========================================
+TOOLS
+=========================================== -->
+
+<section class="tools section">
+
+<div class="section-title">
+
+<span>Tools</span>
+
+<h2>
+
+Technologies I Use
+
+</h2>
+
+</div>
+
+<div class="tools-grid">
+
+<div>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+
+<p>SQL</p>
+
+</div>
+
+
+
+<div>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+
+<p>Python</p>
+
+</div>
+
+
+
+<div>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+
+<p>Git</p>
+
+</div>
+
+
+
+<div>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+
+<p>GitHub</p>
+
+</div>
+
+
+
+<div>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg">
+
+<p>Power BI</p>
+
+</div>
+
+</div>
+
+</section>
+
