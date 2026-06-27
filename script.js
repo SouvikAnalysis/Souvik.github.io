@@ -718,11 +718,11 @@ document.addEventListener("keydown",(e)=>{
 
 // Replace with your EmailJS credentials
 
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_PUBLIC_KEY = "eZcqFAlS1mOE2SWfm";
 
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_SERVICE_ID = "service_m6ujf9q";
 
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_TEMPLATE_ID = "template gsgrzuc";
 
 
 
