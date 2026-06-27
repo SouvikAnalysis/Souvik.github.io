@@ -801,7 +801,7 @@ contactForm.addEventListener("submit",function(e){
     formStatus.style.color="#ef4444";
     formStatus.textContent="Unable to send message. Please try again.";
 
-  });
+  })
 
 
 
