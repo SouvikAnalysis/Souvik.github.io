@@ -1,36 +1,28 @@
-/* ==========================================================
-   PORTFOLIO JAVASCRIPT
-   Part 1
-========================================================== */
+/*==================================================
+                MOBILE MENU
+==================================================*/
+
+const hamburger = document.getElementById("hamburger");
+
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click",()=>{
+
+    mobileMenu.classList.toggle("active");
+
+    hamburger.classList.toggle("active");
+
+});
 
 
-/* ==========================================================
-   MOBILE MENU
-========================================================== */
 
-const hamburger = document.querySelector(".hamburger");
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
 
-const mobileMenu = document.querySelector(".mobile-menu");
-
-
-if (hamburger && mobileMenu) {
-
-    hamburger.addEventListener("click", () => {
-
-        mobileMenu.classList.toggle("active");
-
-    });
-
-}
-
-
-/* Close Mobile Menu After Clicking */
-
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-    link.addEventListener("click", () => {
+    link.addEventListener("click",()=>{
 
         mobileMenu.classList.remove("active");
+
+        hamburger.classList.remove("active");
 
     });
 
@@ -40,23 +32,101 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 
 
 
-/* ==========================================================
-   SMOOTH SCROLL
-========================================================== */
+/*==================================================
+                THEME TOGGLE
+==================================================*/
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+const themeToggle=document.getElementById("theme-toggle");
 
-    anchor.addEventListener("click", function (e) {
+const body=document.body;
+
+const icon=themeToggle.querySelector("i");
+
+
+
+function setTheme(theme){
+
+    if(theme==="light"){
+
+        body.classList.add("light-theme");
+
+        icon.className="fa-solid fa-sun";
+
+    }
+
+    else{
+
+        body.classList.remove("light-theme");
+
+        icon.className="fa-solid fa-moon";
+
+    }
+
+}
+
+
+
+const savedTheme=localStorage.getItem("theme");
+
+if(savedTheme){
+
+    setTheme(savedTheme);
+
+}
+
+
+
+themeToggle.addEventListener("click",()=>{
+
+    const light=body.classList.toggle("light-theme");
+
+
+
+    if(light){
+
+        icon.className="fa-solid fa-sun";
+
+        localStorage.setItem("theme","light");
+
+    }
+
+    else{
+
+        icon.className="fa-solid fa-moon";
+
+        localStorage.setItem("theme","dark");
+
+    }
+
+});
+
+
+
+
+
+/*==================================================
+                SMOOTH SCROLL
+==================================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
 
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const target=document.querySelector(
 
-        if (target) {
+            this.getAttribute("href")
+
+        );
+
+
+
+        if(target){
 
             target.scrollIntoView({
 
-                behavior: "smooth"
+                behavior:"smooth"
 
             });
 
@@ -70,40 +140,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+/*==================================================
+                ACTIVE NAVIGATION
+==================================================*/
 
-/* ==========================================================
-   ACTIVE NAVBAR LINK
-========================================================== */
+const sections=document.querySelectorAll("section");
 
-const sections = document.querySelectorAll("section");
+const navLinks=document.querySelectorAll(
 
-const navLinks = document.querySelectorAll(".nav-links a");
+".nav-links a,.mobile-menu a"
+
+);
 
 
-window.addEventListener("scroll", () => {
 
-    let current = "";
+window.addEventListener("scroll",()=>{
 
-    sections.forEach(section => {
+    let current="";
 
-        const sectionTop = section.offsetTop - 120;
 
-        const sectionHeight = section.clientHeight;
 
-        if (pageYOffset >= sectionTop) {
+    sections.forEach(section=>{
 
-            current = section.getAttribute("id");
+        const top=section.offsetTop-120;
+
+        const height=section.clientHeight;
+
+
+
+        if(window.scrollY>=top){
+
+            current=section.getAttribute("id");
 
         }
 
     });
 
 
-    navLinks.forEach(link => {
+
+    navLinks.forEach(link=>{
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+
+
+        if(
+
+        link.getAttribute("href")==="#"+current
+
+        ){
 
             link.classList.add("active");
 
@@ -117,38 +202,43 @@ window.addEventListener("scroll", () => {
 
 
 
+/*==================================================
+                BACK TO TOP
+==================================================*/
 
-/* ==========================================================
-   BACK TO TOP BUTTON
-========================================================== */
+const backToTop=document.getElementById(
 
-const backToTop = document.getElementById("backToTop");
+"backToTop"
+
+);
 
 
-window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 400) {
+window.addEventListener("scroll",()=>{
 
-        backToTop.style.display = "flex";
+    if(window.scrollY>500){
+
+        backToTop.style.display="flex";
 
     }
 
-    else {
+    else{
 
-        backToTop.style.display = "none";
+        backToTop.style.display="none";
 
     }
 
 });
 
 
-backToTop.addEventListener("click", () => {
+
+backToTop.addEventListener("click",()=>{
 
     window.scrollTo({
 
-        top: 0,
+        top:0,
 
-        behavior: "smooth"
+        behavior:"smooth"
 
     });
 
@@ -158,123 +248,76 @@ backToTop.addEventListener("click", () => {
 
 
 
+/*==================================================
+                HEADER SHADOW
+==================================================*/
 
-/* ==========================================================
-   STICKY HEADER SHADOW
-========================================================== */
-
-const header = document.querySelector("header");
+const header=document.querySelector(".header");
 
 
-window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 60) {
+window.addEventListener("scroll",()=>{
 
-        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.25)";
+    if(window.scrollY>60){
 
-    }
+        header.style.boxShadow=
 
-    else {
-
-        header.style.boxShadow = "none";
+        "0 10px 30px rgba(0,0,0,.18)";
 
     }
 
-});
-/* ==========================================================
-   DARK / LIGHT THEME
-========================================================== */
+    else{
 
-const themeToggle = document.getElementById("theme-toggle");
-
-const body = document.body;
-
-
-/* Load Saved Theme */
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-
-    body.classList.add("light-theme");
-
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-
-}
-
-else {
-
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-
-}
-
-
-/* Toggle Theme */
-
-themeToggle.addEventListener("click", () => {
-
-    body.classList.toggle("light-theme");
-
-
-    if (body.classList.contains("light-theme")) {
-
-        localStorage.setItem("theme", "light");
-
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-
-    }
-
-    else {
-
-        localStorage.setItem("theme", "dark");
-
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        header.style.boxShadow="none";
 
     }
 
 });
-/* ==========================================================
-   TYPING ANIMATION
-========================================================== */
+/*==================================================
+                TYPING ANIMATION
+==================================================*/
 
-const typingText = document.getElementById("typing-text");
+const typingElement = document.getElementById("typing-text");
 
-const words = [
+const typingTexts = [
 
     "Data Analyst",
 
-    "Power BI Developer",
-
     "Business Intelligence Analyst",
 
-    "SQL Developer",
+    "Power BI Developer",
 
-    "Dashboard Developer"
+    "SQL Developer"
 
 ];
 
-let wordIndex = 0;
+let textIndex = 0;
+
 let charIndex = 0;
+
 let deleting = false;
 
-function typeEffect() {
 
-    if (!typingText) return;
 
-    const currentWord = words[wordIndex];
+function typingEffect(){
 
-    if (!deleting) {
+    const currentText = typingTexts[textIndex];
 
-        typingText.textContent =
-            currentWord.substring(0, charIndex + 1);
+
+
+    if(!deleting){
+
+        typingElement.textContent = currentText.substring(0,charIndex);
 
         charIndex++;
 
-        if (charIndex === currentWord.length) {
+
+
+        if(charIndex > currentText.length){
 
             deleting = true;
 
-            setTimeout(typeEffect, 1800);
+            setTimeout(typingEffect,1500);
 
             return;
 
@@ -282,22 +325,23 @@ function typeEffect() {
 
     }
 
-    else {
+    else{
 
-        typingText.textContent =
-            currentWord.substring(0, charIndex - 1);
+        typingElement.textContent = currentText.substring(0,charIndex);
 
         charIndex--;
 
-        if (charIndex === 0) {
+
+
+        if(charIndex < 0){
 
             deleting = false;
 
-            wordIndex++;
+            textIndex++;
 
-            if (wordIndex >= words.length) {
+            if(textIndex >= typingTexts.length){
 
-                wordIndex = 0;
+                textIndex = 0;
 
             }
 
@@ -305,295 +349,516 @@ function typeEffect() {
 
     }
 
-    setTimeout(typeEffect, deleting ? 60 : 120);
+
+
+    setTimeout(
+
+        typingEffect,
+
+        deleting ? 45 : 100
+
+    );
 
 }
 
-typeEffect();
+
+
+typingEffect();
 
 
 
 
 
+/*==================================================
+                COUNTER ANIMATION
+==================================================*/
+
+const counters = document.querySelectorAll(".counter");
 
 
-/* ==========================================================
-   COUNTER ANIMATION
-========================================================== */
 
-const counters = document.querySelectorAll(".stat-card h2");
+function animateCounter(counter){
 
-let counterStarted = false;
+    const target = parseFloat(
 
-function startCounter() {
+        counter.dataset.target
 
-    if (counterStarted) return;
+    );
 
-    counterStarted = true;
 
-    counters.forEach(counter => {
 
-        const text = counter.innerText;
+    let count = 0;
 
-        const number = parseFloat(text);
 
-        const hasPlus = text.includes("+");
 
-        const decimal = text.includes(".");
+    const increment = target / 80;
 
-        let count = 0;
 
-        const speed = number / 60;
 
-        const update = () => {
+    const updateCounter = () => {
 
-            count += speed;
 
-            if (count < number) {
 
-                counter.innerText =
-                    decimal
-                    ? count.toFixed(1)
-                    : Math.floor(count);
+        if(count < target){
 
-                if (hasPlus) {
+            count += increment;
 
-                    counter.innerText += "+";
 
-                }
 
-                requestAnimationFrame(update);
+            if(target % 1 !== 0){
+
+                counter.textContent =
+
+                count.toFixed(1) + "+";
 
             }
 
-            else {
+            else{
 
-                counter.innerText = text;
+                counter.textContent =
+
+                Math.ceil(count) + "+";
 
             }
 
-        };
 
-        update();
+
+            requestAnimationFrame(updateCounter);
+
+        }
+
+        else{
+
+            if(target % 1 !== 0){
+
+                counter.textContent =
+
+                target.toFixed(1) + "+";
+
+            }
+
+            else{
+
+                counter.textContent =
+
+                target + "+";
+
+            }
+
+        }
+
+    };
+
+
+
+    updateCounter();
+
+}
+
+
+
+
+
+/*==================================================
+                COUNTER OBSERVER
+==================================================*/
+
+const counterObserver = new IntersectionObserver(
+
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            animateCounter(entry.target);
+
+            counterObserver.unobserve(entry.target);
+
+        }
 
     });
 
+},
+
+{
+
+    threshold:0.6
+
 }
 
+);
+
+
+
+counters.forEach(counter=>{
+
+    counterObserver.observe(counter);
+
+});
 
 
 
 
 
+/*==================================================
+                SCROLL REVEAL
+==================================================*/
 
-/* ==========================================================
-   SCROLL REVEAL
-========================================================== */
+const revealElements = document.querySelectorAll(
 
-const revealItems = document.querySelectorAll(
-
-    ".about-content," +
-    ".about-info," +
-    ".stat-card," +
-    ".skill-card," +
-    ".timeline-item," +
-    ".project-card," +
-    ".certificate-card," +
-    ".achievement-card," +
-    ".contact-card," +
-    ".contact-form"
+".stat-card, .info-card, .skill-card, .timeline-item, .project-card, .certificate-card, .contact-card"
 
 );
+
+
+
+revealElements.forEach(el=>{
+
+    el.classList.add("hidden");
+
+});
+
 
 
 const revealObserver = new IntersectionObserver(
 
-(entries) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},
-
-{
-
-threshold:0.15
-
-}
-
-);
-
-
-revealItems.forEach(item => {
-
-item.classList.add("hidden");
-
-revealObserver.observe(item);
-
-});
-
-
-
-
-
-
-
-/* ==========================================================
-   START COUNTER WHEN SECTION IS VISIBLE
-========================================================== */
-
-const statistics = document.querySelector(".statistics");
-
-if(statistics){
-
-const statsObserver = new IntersectionObserver(
-
 (entries)=>{
 
-entries.forEach(entry=>{
+    entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-startCounter();
+            entry.target.classList.add("show");
 
-}
+        }
 
-});
+    });
 
 },
 
 {
 
-threshold:0.5
+    threshold:0.15
 
 }
 
 );
 
-statsObserver.observe(statistics);
 
-}
 
-/* ==========================================================
-   EMAILJS INITIALIZATION
-========================================================== */
+revealElements.forEach(el=>{
 
-/*
--------------------------------------------------------------
-Replace these values after creating your EmailJS account.
+    revealObserver.observe(el);
 
-Public Key
-Service ID
-Template ID
--------------------------------------------------------------
-*/
-
-emailjs.init("YOUR_PUBLIC_KEY");
+});
 
 
 
-/* ==========================================================
-   CONTACT FORM
-========================================================== */
+
+
+/*==================================================
+                BUTTON RIPPLE EFFECT
+==================================================*/
+
+const buttons = document.querySelectorAll(".btn");
+
+
+
+buttons.forEach(button=>{
+
+    button.addEventListener("click",function(e){
+
+        const ripple = document.createElement("span");
+
+
+
+        const rect = this.getBoundingClientRect();
+
+
+
+        const size = Math.max(
+
+            rect.width,
+
+            rect.height
+
+        );
+
+
+
+        ripple.style.width = size + "px";
+
+        ripple.style.height = size + "px";
+
+
+
+        ripple.style.left =
+
+        e.clientX - rect.left - size/2 + "px";
+
+
+
+        ripple.style.top =
+
+        e.clientY - rect.top - size/2 + "px";
+
+
+
+        ripple.classList.add("ripple");
+
+
+
+        this.appendChild(ripple);
+
+
+
+        setTimeout(()=>{
+
+            ripple.remove();
+
+        },600);
+
+    });
+
+});
+
+
+
+
+
+/*==================================================
+                PAGE LOADER
+==================================================*/
+
+window.addEventListener("load",()=>{
+
+    document.body.classList.add("loaded");
+
+});
+/*==================================================
+                PROJECT IMAGE MODAL
+==================================================*/
+
+const modal = document.getElementById("imageModal");
+
+const modalImage = document.getElementById("modalImage");
+
+const closeModal = document.getElementById("closeModal");
+
+const previewButtons = document.querySelectorAll(".preview-btn");
+
+previewButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const image = button.dataset.image;
+
+        modalImage.src = image;
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+
+closeModal.addEventListener("click",()=>{
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+});
+
+
+
+modal.addEventListener("click",(e)=>{
+
+    if(e.target===modal){
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow="";
+
+    }
+
+});
+
+
+
+
+
+/*==================================================
+                ESC KEY CLOSE MODAL
+==================================================*/
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow="";
+
+    }
+
+});
+
+
+
+
+
+/*==================================================
+                EMAILJS
+==================================================*/
+
+// Replace with your EmailJS credentials
+
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+
+
+
+emailjs.init({
+
+    publicKey: EMAILJS_PUBLIC_KEY
+
+});
+
+
 
 const contactForm = document.getElementById("contact-form");
 
 const formStatus = document.getElementById("form-status");
 
 
-if(contactForm){
 
 contactForm.addEventListener("submit",function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-const submitButton=this.querySelector("button");
 
-submitButton.disabled=true;
 
-submitButton.innerHTML=
+    const submitButton = contactForm.querySelector("button");
 
-'<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-const templateParams={
 
-name:document.getElementById("name").value,
+    submitButton.disabled = true;
 
-email:document.getElementById("email").value,
+    submitButton.innerHTML =
 
-subject:document.getElementById("subject").value,
+    '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
-message:document.getElementById("message").value
 
-};
 
-emailjs.send(
+    emailjs.send(
 
-"YOUR_SERVICE_ID",
+        EMAILJS_SERVICE_ID,
 
-"YOUR_TEMPLATE_ID",
+        EMAILJS_TEMPLATE_ID,
 
-templateParams
+        {
 
-)
+            from_name:document.getElementById("name").value,
 
-.then(function(){
+            from_email:document.getElementById("email").value,
 
-formStatus.innerHTML=
+            subject:document.getElementById("subject").value,
 
-"✅ Message sent successfully!";
+            message:document.getElementById("message").value
 
-formStatus.style.color="#22c55e";
+        }
 
-contactForm.reset();
+    )
 
-})
 
-.catch(function(error){
 
-console.log(error);
+    .then(()=>{
 
-formStatus.innerHTML=
+        formStatus.style.color="#22c55e";
 
-"❌ Failed to send message. Please try again.";
+        formStatus.textContent="Message sent successfully!";
 
-formStatus.style.color="#ef4444";
 
-})
 
-.finally(function(){
+        contactForm.reset();
 
-submitButton.disabled=false;
+    })
 
-submitButton.innerHTML=
 
-'<i class="fas fa-paper-plane"></i> Send Message';
 
-setTimeout(()=>{
+    .catch(()=>{
 
-formStatus.innerHTML="";
+        formStatus.style.color="#ef4444";
 
-},5000);
+        formStatus.textContent="Unable to send message. Please try again.";
+
+    })
+
+
+
+    .finally(()=>{
+
+        submitButton.disabled=false;
+
+        submitButton.innerHTML=
+
+        '<i class="fa-solid fa-paper-plane"></i> Send Message';
+
+    });
 
 });
 
+
+
+
+
+/*==================================================
+                PRELOAD IMAGES
+==================================================*/
+
+["images/swiggy.png","images/pge.png"].forEach(src=>{
+
+    const img=new Image();
+
+    img.src=src;
+
 });
+
+
+
+
+
+/*==================================================
+                ACTIVE YEAR
+==================================================*/
+
+const copyright=document.querySelector(".copyright");
+
+
+
+if(copyright){
+
+    copyright.innerHTML=
+
+    `© ${new Date().getFullYear()} Souvik Ghosh. All Rights Reserved.`;
 
 }
 
 
 
 
-/* ==========================================================
-   CONSOLE MESSAGE
-========================================================== */
+
+/*==================================================
+                CONSOLE MESSAGE
+==================================================*/
 
 console.log(
 
@@ -603,23 +868,20 @@ console.log(
 
 );
 
+
+
 console.log(
 
-"%cThank you for visiting my portfolio!",
+"%cData Analyst | Power BI Developer | SQL",
 
-"color:#22c55e;font-size:14px;"
+"color:#94a3b8;font-size:14px;"
 
 );
 
 
 
 
-/* ==========================================================
-   PAGE LOADED
-========================================================== */
 
-window.addEventListener("load",()=>{
-
-document.body.classList.add("loaded");
-
-});
+/*==================================================
+                END
+==================================================*/
