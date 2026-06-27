@@ -794,13 +794,14 @@ contactForm.addEventListener("submit",function(e){
 
 
 
-    .catch(()=>{
+    .catch((error)=>{
 
-        formStatus.style.color="#ef4444";
+    console.log("EmailJS Error:", error);
 
-        formStatus.textContent="Unable to send message. Please try again.";
+    formStatus.style.color="#ef4444";
+    formStatus.textContent="Unable to send message. Please try again.";
 
-    })
+  });
 
 
 
