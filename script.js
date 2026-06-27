@@ -722,7 +722,7 @@ const EMAILJS_PUBLIC_KEY = "eZcqFAlS1mOE2SWfm";
 
 const EMAILJS_SERVICE_ID = "service_m6ujf9q";
 
-const EMAILJS_TEMPLATE_ID = "template gsgrzuc";
+const EMAILJS_TEMPLATE_ID = "template_gsgrzuc";
 
 
 
